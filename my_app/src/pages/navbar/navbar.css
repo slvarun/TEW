@@ -1,0 +1,25 @@
+.logout_btn{
+    border: none;
+    margin: 7px;
+    background-color: grey;
+    color: white;
+    border-radius: 10px;
+    font-weight: 400;
+    font-size: 15px;
+}
+.user_name{
+    display: flex;
+}
+.name{
+    text-align: center;
+    margin-top: 3px;
+    font-size: 20px;
+}
+.add_mon_btn{
+    margin: 5px 20px 0 0;
+    border: none;
+    background-color: grey;
+    border-radius: 20px;
+    color: white;
+
+}

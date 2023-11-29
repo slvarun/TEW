@@ -1,0 +1,102 @@
+.monwrapper {
+  width: 50%;
+  position: relative;
+  margin: 18px;
+}
+.mon_im {
+  width:800px;
+  height: 6 00px;
+  
+}
+.mon_min_details {
+  position: absolute;
+  top: 11px;
+  left: 16px;
+  font-weight: bold;
+  font-size: 30px;
+}
+.montitle {
+  color: rgb(255, 255, 255);
+}
+.location_name {
+  color: rgb(255, 255, 255);
+}
+.monContainer {
+  display: flex;
+  justify-content: space-around;
+}
+.max_details {
+  width: 50%;
+  margin: 20px;
+}
+.mon_heading {
+  text-decoration: underline;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 38px;
+  font-weight: 500;
+}
+.mon_desc {
+  margin: 20px;
+}
+.main_ticket {
+  display: flex;
+  justify-content: space-between;
+}
+.mon_info {
+  text-align: center;
+  font-size: 35px;
+  font-weight: 400;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+.under_info {
+  width: 30%;
+}
+.ticket_info {
+  width: 60%;
+}
+.ticketinfohead {
+  margin-left: 50px;
+}
+.ticket_img {
+  margin-top: 30px;
+  height: 200px;
+  width: 100px;
+  
+}
+.term-c {
+  margin-top: 30px;
+}
+.ticket_details {
+  width: 30%;
+}
+.t_rate {
+  display: flex;
+}
+.t_rate > span {
+  font-size: 17px;
+}
+.ticket_rate {
+  color: red;
+  font-size: 35px;
+  font-weight: 600;
+}
+.mon_info_container {
+  border: 2px solid black;
+  padding: 20px;
+  border-radius: 10px;
+}
+.book_div{
+  margin: 50px;
+  cursor:pointer;
+}
+.book_button{
+  border:none;
+  background-color: red;
+  width: 10vw;
+  height: 7vh;
+  color: white;
+  font-weight:800;
+  font-size: 20px;
+  border-radius: 20px;
+  cursor:pointer;
+}

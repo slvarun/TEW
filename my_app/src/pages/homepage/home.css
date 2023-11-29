@@ -1,0 +1,24 @@
+.homeContainer{
+    margin-top: 50px;
+    display: grid;
+    
+}
+.mon_container{
+    margin-top: 50px;
+    align-items: center;
+    width: max-content;
+    float: left;
+    display: flex;
+    /* flex-direction:column; */
+    align-items: center;
+    margin:10px
+
+    
+
+}
+
+
+
+
+
+

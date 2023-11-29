@@ -1,0 +1,48 @@
+.mon_image {
+  position: relative;
+  
+  color: white;
+}
+.mon_img{
+  height: 300px;
+  width: 400px;
+}
+.mon_min_details {
+  position: absolute;
+  top: 1px;
+  left: 16px;
+}
+.place {
+  font-size: 20px;
+}
+.monrating {
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  font-weight: 700;
+  color: black;
+  background-color: white;
+  border-radius: 5px;
+  padding: 3px;
+}
+.Title {
+  font-size: 30px;
+  text-decoration: underline;
+  margin: 30px;
+}
+.card {
+  margin: 20px;
+}
+.card:hover {
+  transition: 900ms;
+
+  box-shadow: 5px rgba(0, 0, 0, 0.425);
+}
+.mon_container {
+  display: flex;
+  
+}
+.siCheckbutton{
+  margin-left: 60px
+}
+
