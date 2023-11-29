@@ -9,8 +9,7 @@ const Qrcode = () => {
   const navigate = useNavigate();
 
   const location = useLocation();
-  const id = location.pathname.split("/")[3];
-  const { data, loading, error, reFetchData } = useFetch(
+  const { data} = useFetch(
     `/bookingorder/monuments/book/${location.state.bid}/qr`
   );
 

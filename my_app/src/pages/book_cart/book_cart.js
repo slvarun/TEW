@@ -3,10 +3,7 @@ import useFetch from "../../hooks/useFetch.js";
 import { useLocation } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
-import { Link } from "react-router-dom";
-import { AuthContext } from "../../context/authcontext";
-import { useContext, useState } from "react";
-import Navbar from "../navbar/navbar";
+import { useState } from "react";
 import axios from "axios";
 
 const Book = () => {
@@ -17,10 +14,9 @@ const Book = () => {
   };
 
   const location = useLocation();
-  const { user } = useContext(AuthContext);
   const result = Math.random().toString(36).substring(2, 7);
   const id = location.pathname.split("/")[3];
-  const { data, loading, error, reFetchData } = useFetch(
+  const { data, loading } = useFetch(
     `/monuments/find/${id}`
   );
   const ap = data.adult_price;

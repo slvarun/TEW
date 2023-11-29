@@ -8,12 +8,8 @@ import "./separate_qr.css"
 
 
 const A_qr_Block = ({ item }) => {
-  const { user } = useContext(AuthContext);
   const [openModal, setOpenModal] = useState(false);
   const navigate = useNavigate();
-  const handleClick = () => {
-      navigate(`/Admin/${item._id}`);
-  };
   const [src, setSrc] = useState("");
   useEffect(() => {
     QRCode.toDataURL(
