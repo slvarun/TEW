@@ -17,7 +17,7 @@ const Book = () => {
   const result = Math.random().toString(36).substring(2, 7);
   const id = location.pathname.split("/")[3];
   const { data, loading } = useFetch(
-    `/monuments/find/${id}`
+    `https://entry-way-backend.onrender.com/monuments/find/${id}`
   );
   const ap = data.adult_price;
   const cp = data.child_price;
@@ -25,7 +25,7 @@ const Book = () => {
     e.preventDefault();
     try {
       console.log(credentials);
-      await axios.post(`/bookingorder/monuments/book/${data._id}`, credentials);
+      await axios.post(`https://entry-way-backend.onrender.com/bookingorder/monuments/book/${data._id}`, credentials);
       navigate(`/monuments/book/${credentials._id}/qr`, {
         state: { id: 1, bid: credentials._id },
       });

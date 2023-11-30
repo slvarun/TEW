@@ -12,7 +12,7 @@ const Add_mon = () => {
     e.preventDefault();
     try {
       console.log(credentials);
-      await axios.post(`/monuments/create_mon`, credentials);
+      await axios.post(`https://entry-way-backend.onrender.com/monuments/create_mon`, credentials);
       navigate(`/`);
     } catch (err) {
       console.log(err);

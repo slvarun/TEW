@@ -6,7 +6,7 @@ import useFetch from "../../hooks/useFetch";
 import Mon_Block from "../mon_block/mon_home_block";
 import "./home.css";
 const Home = () => {
-  const { data, loading } = useFetch(`/monuments`);
+  const { data, loading } = useFetch("https://entry-way-backend.onrender.com/monuments");
   return (
     <div>
       <Navbar />

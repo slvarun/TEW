@@ -7,11 +7,10 @@ import authRoute from "./routes/auth.js"
 import bookingRoute from "./routes/bookingorder.js"
 import AdminRoute from "./routes/admin.js"
 import cookieParser from "cookie-parser"
-
+import cors from 'cors';
 
 const app = express();
 dotenv.config();
-
 
 
 mongoose.set('strictQuery', true);
@@ -28,6 +27,7 @@ mongoose.connection.on("disconnected", ()=>{
 })
 
 
+app.use(cors());
 
 
 app.use(cookieParser())
@@ -38,12 +38,12 @@ app.use(express.json())
 
 
 
-app.use("/api/monuments",monumentsRoute);
-app.use("/api/users", userRoute)
+app.use("/monuments",monumentsRoute);
+app.use("/users", userRoute)
                                                     //  using other files as library
-app.use("/api/auth", authRoute)
-app.use("/api/bookingorder", bookingRoute)
-app.use("/api/admin", AdminRoute)
+app.use("/auth", authRoute)
+app.use("/bookingorder", bookingRoute)
+app.use("/admin", AdminRoute)
 
 
 

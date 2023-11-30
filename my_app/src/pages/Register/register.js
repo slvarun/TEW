@@ -26,7 +26,7 @@ const[toggle, setToggle] = useState(false)
     
     try {
       console.log(credentials)
-      await axios.post("/auth/register", credentials);
+      await axios.post("https://entry-way-backend.onrender.com/auth/register", credentials);
       navigate("/");
       
     } catch (err) {

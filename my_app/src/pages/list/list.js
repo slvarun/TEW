@@ -1,36 +1,32 @@
-import React from "react";
-import "./list.css";
-import Navbar from "../navbar/navbar";
-
-import SearchItem from "../searchItem/Searchitem.js";
-
-import { format } from "date-fns";
-
-import { useState } from "react";
+import React, { useState } from "react";
 import { useLocation } from "react-router-dom";
 import { DateRange } from "react-date-range";
 import useFetch from "../../hooks/useFetch";
+import { format } from "date-fns";
+
+import Navbar from "../navbar/navbar";
+import SearchItem from "../searchItem/Searchitem.js";
+
+import "./list.css";
 
 const List = () => {
   const location = useLocation();
   const [Destination, setDestination] = useState(location.state.Destination);
   const [date, setDate] = useState(location.state.date);
   const [openDate, setOpenDate] = useState(false);
-
-  const [min, setMin] = useState(undefined);
-  const [max, setMax] = useState(undefined);
-
-  const { data, loading, reFetchData } = 
-  useFetch(
-    `/monuments?city=${Destination}&min=${min | 0}&max=${max || 3000}`
+  const [min, setMin] = useState(undefined); // Declare min state
+  const [max, setMax] = useState(undefined); // Declare max state
+  const { data, loading, reFetchData } = useFetch(
+    `https://entry-way-backend.onrender.com/monuments?city=${Destination}&min=${min ?? 0}&max=${max ?? 3000}`
   );
-  const handleclick = () => {
+
+  const handleSearch = () => {
     reFetchData();
   };
+
   return (
     <div>
       <Navbar />
-
       <div className="listcontainer">
         <div className="listWrapper">
           <div className="listSearch">
@@ -67,7 +63,7 @@ const List = () => {
                 />
               )}
             </div>
-            <button onClick={handleclick} className="search_btn">
+            <button onClick={handleSearch} className="search_btn">
               Search
             </button>
           </div>
@@ -78,6 +74,7 @@ const List = () => {
               <>
                 {data.map((item) => (
                   <SearchItem item={item} key={item._id} />
+                  
                 ))}
               </>
             )}

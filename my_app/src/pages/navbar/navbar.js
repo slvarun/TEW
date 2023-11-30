@@ -2,7 +2,7 @@ import "./navbar.css";
 import { AuthContext } from "../../context/authcontext";
 import { useContext } from "react";
 import {useNavigate } from "react-router-dom";
-
+import { Link } from 'react-router-dom';
 import "react-date-range/dist/styles.css";
 import "react-date-range/dist/theme/default.css";
 
@@ -14,7 +14,7 @@ const Navbar = () => {
     navigate("/");
   };
   const handle_add_mon =()=>{
-    navigate("/create_mon");
+    navigate("/monuments/create_mon");
 
 
   }
@@ -68,9 +68,7 @@ const Navbar = () => {
                 </div>
               ) : (
                 <li className="nav-item" style={{ margin: "0 15px 0 15px" }}>
-                  <a className="nav-link" href="/auth/login">
-                    log in
-                  </a>
+                  <Link to="/auth/login">Go to Login</Link>
                 </li>
               )}
             </ul>

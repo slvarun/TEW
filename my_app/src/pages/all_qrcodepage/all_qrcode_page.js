@@ -8,7 +8,7 @@ const A_qr_Home = () => {
     const location = useLocation();
 
   const id = location.pathname.split("/")[2];
-  const { data, loading } = useFetch(`/admin/Admin/${id}?id=${id}`);
+  const { data, loading } = useFetch(`https://entry-way-backend.onrender.com/admin/Admin/${id}?id=${id}`);
   
   return (
     <div>

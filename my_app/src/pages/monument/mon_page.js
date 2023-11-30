@@ -9,7 +9,7 @@ const Mon = () => {
   const id = location.pathname.split("/")[2];
 
   const { data, loading} = useFetch(
-    `/monuments/find/${id}`
+    `https://entry-way-backend.onrender.com/monuments/find/${id}`
   );
 
   return (
@@ -35,7 +35,7 @@ const Mon = () => {
                 >
                   <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
                 </svg>
-                <span className="location_name"> {data.city} - Agra</span>
+                <span className="location_name"> {data.city}</span>
               </div>
             </div>
             <Link to={`/monuments/book/${data._id}`}>
