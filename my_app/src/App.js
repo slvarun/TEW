@@ -13,10 +13,9 @@ import A_Home from "./pages/admin_home/ah.js";
 function App() {
   return (
     <>
-      <BrowserRouter basename='/'>
+      <BrowserRouter>
         <Routes>
           <Route path="/home" element={<Home />} />
-          {/* <Route path="/slvarun.io/Entry-Way/" element={<Home />} /> */}
           <Route path="/monuments" element={<List />} />
           <Route path="/monuments/:id" element={<Mon />} />
           <Route path="/auth/login" element={<Login />} />
